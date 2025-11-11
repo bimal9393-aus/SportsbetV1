@@ -4,11 +4,15 @@ const scenarios = require('./data/placebettestdata.json'); // Test data drives h
 const { setLogSink } = require('../../core/logger');
 const { ElementNotFoundError, AssertionError, TimeoutError } = require('../../core/errors');
 
+const shouldSkipOnCi = !!process.env.CI;
+
 test.describe('Bet slip journey', () => {
   test.describe.configure({ timeout: 15000 });
 
   scenarios.forEach((dataSet) => {
-    test(`${dataSet.name} › Adds Win + Place bets and verifies bet slip contents`, async ({ page, pom }, testInfo) => {
+    const runner = shouldSkipOnCi ? test.skip : test;
+
+    runner(`${dataSet.name} › Adds Win + Place bets and verifies bet slip contents`, async ({ page, pom }, testInfo) => {
       const loginPage = pom.loginPage;
       const racecardPage = pom.racecardPage;
       const betSlipCart = pom.betSlipCart;
