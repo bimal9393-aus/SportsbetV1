@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Mountaineer R8 - Charlie Mes or fallback",
+    "url": "https://www.sportsbet.com.au",
+    "horseName": "1. Charlie Mes",
+    "fallbackIndex": 3
+  },
+  {
+    "name": "Bursa R6 - Sancar Efesi  or fallback",
+    "url": "https://www.sportsbet.com.au",
+    "horseName": "1. Sancar Efesi (2)",
+    "fallbackIndex": 0
+  }
+]
+   
