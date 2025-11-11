@@ -8,18 +8,26 @@ const { waitVisible, waitEnabled, waitForUrlContains } = require('./waits');
 
 
 class BasePage {
+  /**
+   * Shared base constructor wires the Playwright page, scoped logger, and a sane default timeout
+   * so subclasses can focus on business interactions instead of plumbing.
+   */
   constructor(page, logger) {
     this.page = page;
     this.logger = logger || createLogger(this.constructor.name);
     this.defaultTimeout = 15000;
   }
 
-
+  /**
+   * Normalizes any selector input (string, Locator, etc.) to a Locator instance for consistency.
+   */
   locator(target) {
     return typeof target === 'string' ? this.page.locator(target) : target;
   }
 
-
+  /**
+   * Navigates to a URL with optional expectations (URL fragment, title match) to confirm arrival.
+   */
   async goto(url, options = {}) {
     const gotoOptions = options.gotoOptions || { waitUntil: 'domcontentloaded' };
     await this.page.goto(url, gotoOptions);
@@ -31,6 +39,9 @@ class BasePage {
     }
   }
 
+  /**
+   * Clicks a locator with visibility/enabled guards and a lightweight retry loop for flakiness.
+   */
   async click(target, options = {}) {
     const locator = this.locator(target);
     const timeout = options.timeout || this.defaultTimeout;
@@ -48,6 +59,10 @@ class BasePage {
 
     await this.#withRetry(action, retries, retryDelay);
   }
+
+  /**
+   * Retries the supplied async action a limited number of times, logging every retry for traceability.
+   */
   async #withRetry(action, retries = 1, delay = 200) {
     let attempts = 0;
     while (attempts <= retries) {
@@ -66,7 +81,11 @@ class BasePage {
     }
     return undefined;
   }
-async fill(target, value, options = {}) {
+
+  /**
+   * Fills a field after confirming it is visible; accepts optional Playwright fill options.
+   */
+  async fill(target, value, options = {}) {
     const locator = this.locator(target);
     const timeout = options.timeout || this.defaultTimeout;
     await waitVisible(locator, timeout);
@@ -76,6 +95,9 @@ async fill(target, value, options = {}) {
     });
   }
 
+  /**
+   * Returns trimmed text content for any locator, throwing if the element never becomes visible.
+   */
   async getText(target, options = {}) {
     const locator = this.locator(target);
     await waitVisible(locator, options.timeout || this.defaultTimeout);
@@ -83,26 +105,36 @@ async fill(target, value, options = {}) {
     return content?.trim() || '';
   }
 
+  /**
+   * Utility wait that ensures a locator is visible before handing it back to callers.
+   */
   async waitForVisible(target, timeout) {
     const locator = this.locator(target);
     await waitVisible(locator, timeout || this.defaultTimeout);
     return locator;
   }
 
+  /**
+   * Waits until the locator is both attached and enabled; useful for buttons disabled via JS.
+   */
   async waitForEnabled(target, timeout) {
     const locator = this.locator(target);
     await waitEnabled(this.page, locator, timeout || this.defaultTimeout);
     return locator;
   }
 
+  /**
+   * Blocks until the current URL contains the provided fragment (case-insensitive).
+   */
   async waitForUrlContains(fragment, timeout) {
     await waitForUrlContains(this.page, fragment, timeout || this.defaultTimeout);
   }
 
+  /**
+   * Thin wrapper around Playwright's load-state wait so callers inherit the same default timeout.
+   */
   async waitForLoadState(state = 'domcontentloaded', timeout) {
     await this.page.waitForLoadState(state, { timeout: timeout || this.defaultTimeout });
   }
-
 }
 module.exports = { BasePage };
-

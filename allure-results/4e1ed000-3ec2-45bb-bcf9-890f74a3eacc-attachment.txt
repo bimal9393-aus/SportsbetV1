@@ -1,0 +1,5 @@
+[18:46:23] [e2e:Mountaineer R8 - Charlie Mes or fallback › Adds Win + Place bets and verifies bet slip contents:RacecardPage] [WARN] Horse not found, selecting fallback runner {"horseName":"1. Charlie Mes","fallbackIndex":3,"fallbackRunner":"4. Neu Schloss (4)"}
+[18:46:27] [e2e:Mountaineer R8 - Charlie Mes or fallback › Adds Win + Place bets and verifies bet slip contents:RacecardPage] [INFO] Bet added to slip {"runner":"4. Neu Schloss (4)","betType":"Win","odds":"81.00"}
+[18:46:27] [e2e:Mountaineer R8 - Charlie Mes or fallback › Adds Win + Place bets and verifies bet slip contents:RacecardPage] [INFO] Bet added to slip {"runner":"4. Neu Schloss (4)","betType":"Place","odds":"12.00"}
+[18:46:27] [e2e:Mountaineer R8 - Charlie Mes or fallback › Adds Win + Place bets and verifies bet slip contents:BetSlipCart] [INFO] Bet verified {"runner":"4. Neu Schloss (4)","odds":"81.00","actualBetType":"Win","expectedBetType":"Win"}
+[18:46:27] [e2e:Mountaineer R8 - Charlie Mes or fallback › Adds Win + Place bets and verifies bet slip contents:BetSlipCart] [INFO] Bet verified {"runner":"4. Neu Schloss (4)","odds":"12.00","actualBetType":"Place","expectedBetType":"Place"}

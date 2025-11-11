@@ -16,6 +16,7 @@ class BetSlipCart extends BasePage {
     };
   }
 
+  /** Ensures the bet slip drawer is visible before attempting to interrogate it. */
   async openBetSlip() {
     // Ensure the bet slip drawer is visible before reading data.
     const panel = this.page.locator(this.selectors.panel);
@@ -25,6 +26,9 @@ class BetSlipCart extends BasePage {
     await this.waitForVisible(panel);
   }
 
+  /**
+   * Cross-checks supplied bet metadata (runner, bet type, odds) against what the slip currently shows.
+   */
   async verifyBetsAdded(expectedBets = []) {
     // Cross-checks supplied bets against what the slip currently shows.
     if (!expectedBets.length) {
@@ -64,12 +68,16 @@ class BetSlipCart extends BasePage {
     }
   }
 
+  /** Returns raw bet rows for reporting/debug purposes. */
   async getBetSummary() {
     // Returns raw bet rows for reporting/debug purposes.
     await this.#ensureSlipReady();
     return this.#captureBetRows();
   }
 
+  /**
+   * Opens the slip, ensures it contains at least one row, and fails with a TimeoutError otherwise.
+   */
   async #ensureSlipReady() {
     // Opens slip, blocks on initial odds, and fails fast if empty.
     await this.openBetSlip();
@@ -83,6 +91,7 @@ class BetSlipCart extends BasePage {
     });
   }
 
+  /** Harvests runner/odds/bet-type info row-by-row so higher-level verifications stay readable. */
   async #captureBetRows() {
     // Harvest runner/odds/bet type info row-by-row.
     const runnerLocator = this.page.locator(this.selectors.betRunnerName);
@@ -111,6 +120,7 @@ class BetSlipCart extends BasePage {
     );
   }
 
+  /** Finds the selected market toggle for a row, accounting for multiple toggle layouts. */
   async #extractBetTypeForRow(rowIndex, togglesPerRow, togglesCount) {
     // Finds the selected market toggle for a row.
     const toggleLocator = this.page.locator(this.selectors.betMarketToggleGroup);

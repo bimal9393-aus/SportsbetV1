@@ -13,6 +13,7 @@ const allureBinary = resolve(
 );
 
 function runAllure(args) {
+  // Thin wrapper around spawnSync so we can surface Allure CLI failures with useful exit codes.
   const result = spawnSync(allureBinary, args, { stdio: 'inherit' });
   if (result.error) {
     console.error(result.error);

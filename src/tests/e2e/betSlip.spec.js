@@ -4,6 +4,7 @@ const scenarios = require('./data/placebettestdata.json'); // Test data drives h
 const { setLogSink } = require('../../core/logger');
 const { ElementNotFoundError, AssertionError, TimeoutError } = require('../../core/errors');
 
+// Live Sportsbet journeys are intentionally skipped on CI to avoid hitting prod from pipelines.
 const shouldSkipOnCi = !!process.env.CI;
 
 test.describe('Bet slip journey', () => {
@@ -18,6 +19,7 @@ test.describe('Bet slip journey', () => {
       const betSlipCart = pom.betSlipCart;
       const { url, horseName, fallbackIndex } = dataSet;
       const attachScreenshot = async (name) => {
+        // Helper so every pivotal step ships a full-page artifact in the Allure report.
         const shot = await page.screenshot({ fullPage: true });
         await allure.attachment(name, shot, 'image/png');
       };
@@ -117,6 +119,7 @@ test.describe('Bet slip journey', () => {
       );
 
       if (!page.isClosed()) {
+        // Attach at least one fresh screenshot so debuggers do not rely solely on Allure artifacts.
         const failure = await page.screenshot({ fullPage: true });
         await testInfo.attach('Failure screenshot', { body: failure, contentType: 'image/png' });
         await allure.attachment('Failure screenshot', failure, 'image/png');

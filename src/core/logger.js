@@ -12,6 +12,7 @@ const defaultFormatter = new DateTimeFormat('en', {
 let logSink;
 
 function setLogSink(sink) {
+  // Allows tests to capture log output (e.g., push entries into Allure attachments).
   const previous = logSink;
   logSink = sink;
   return previous;
@@ -28,6 +29,7 @@ const formatMeta = (metadata) => {
 };
 
 function createLogger(scope = 'app') {
+  // Creates a scoped logger that prints timestamps and optionally delegates to a sink.
   const log = (level, message, metadata) => {
     const timestamp = defaultFormatter.format(new Date());
     const metaString = formatMeta(metadata);
@@ -46,9 +48,11 @@ function createLogger(scope = 'app') {
     }
   };
 
+  // Allows nested scopes like "e2e:Bet slip journey" for easy filtering.
   const child = (childScope) => createLogger(`${scope}:${childScope}`);
 
   const step = async (name, fn, metadata) => {
+    // Convenience wrapper so important business steps have symmetric START/END lines.
     log('info', `STEP START - ${name}`, metadata);
     try {
       const result = await fn();

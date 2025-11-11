@@ -8,6 +8,7 @@ class TestDataLoader {
   static cache;
   static dataPath = resolve(process.cwd(), 'TestData.json');
 
+  /** Reads TestData.json once, caches it, and enforces a minimal schema (baseUrl today). */
   static load() {
     if (!this.cache) {
       // TODO: extend validation when schema grows (e.g., env toggles, credentials, etc.).

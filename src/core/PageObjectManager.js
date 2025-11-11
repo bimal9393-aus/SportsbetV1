@@ -10,10 +10,14 @@ class PageObjectManager {
     this.cache = {};
   }
 
+  /**
+   * Prefixes the logger scope with the page-object name so log lines remain contextual.
+   */
   #childLogger(name) {
     return this.logger?.child ? this.logger.child(name) : this.logger;
   }
 
+  /** Lazily instantiates the HomePage and memoizes it for the duration of the test. */
   get loginPage() {
     if (!this.cache.loginPage) {
       this.cache.loginPage = new HomePage(this.page, this.#childLogger('HomePage'));
@@ -21,6 +25,7 @@ class PageObjectManager {
     return this.cache.loginPage;
   }
 
+  /** Returns a cached RacecardPage, wiring a child logger for readable traces. */
   get racecardPage() {
     if (!this.cache.racecardPage) {
       this.cache.racecardPage = new RacecardPage(this.page, this.#childLogger('RacecardPage'));
@@ -28,6 +33,7 @@ class PageObjectManager {
     return this.cache.racecardPage;
   }
 
+  /** Provides the BetSlipCart POM (created once) so verifications share stateful helpers. */
   get betSlipCart() {
     if (!this.cache.betSlipCart) {
       this.cache.betSlipCart = new BetSlipCart(this.page, this.#childLogger('BetSlipCart'));

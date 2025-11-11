@@ -17,6 +17,7 @@ class HomePage extends BasePage {
     };
   }
 
+  /** Navigates to Sportsbet and asserts the canonical title/URL fragment. */
   async goTo(url = this.homeUrl) {
     await this.goto(url, {
       expectTitle: this.homeTitle,
@@ -24,13 +25,14 @@ class HomePage extends BasePage {
     });
   }
 
-  // Optional helper if logging in becomes necessary.
+  /** Optional helper if we ever need to authenticate before exploring a race card. */
   async login(username, password) {
     await this.fill(this.selectors.userName, username);
     await this.fill(this.selectors.password, password);
     await this.click(this.selectors.loginButton);
   }
 
+  /** Clicks the requested carousel card (default index 1) to open a race page. */
   async openFirstRaceCard(index = 1) {
     const raceCard = this.page.locator(this.selectors.firstRacecard).nth(index);
     await this.waitForVisible(raceCard);

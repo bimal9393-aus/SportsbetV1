@@ -17,12 +17,16 @@ class RacecardPage extends BasePage {
     };
   }
 
+  /** Wait until at least one runner card is rendered. */
   async waitForRacecard() {
     // Wait until at least one runner card is rendered.
     const firstCard = this.page.locator(this.selectors.raceCardOutcomeCards).first();
     await this.waitForVisible(firstCard);
   }
 
+  /**
+   * Locates the requested horse card; if the horse name is missing, a configured fallback index is used.
+   */
   async findHorseCardOrFallback(horseName, fallbackIndex = 0) {
     // Try to match the requested horse; otherwise fall back to index.
     await this.waitForRacecard();
@@ -69,6 +73,10 @@ class RacecardPage extends BasePage {
     );
   }
 
+  /**
+   * Clicks a win/place/each-way button with guards and optionally dismisses the bet slip so subsequent
+   * interactions are not blocked by the overlay.
+   */
   async clickOddsButton(buttonLocator, { expectBetSlip = true } = {}) {
     // Click odds button with visibility/enabled guards and optional slip handling.
     const button = this.locator(buttonLocator);
@@ -98,6 +106,9 @@ class RacecardPage extends BasePage {
     }
   }
 
+  /**
+   * Iterates bet types, clicks odds buttons, and returns structured metadata so later steps can verify.
+   */
   async placeBetsOnCard(horseCard, betTypes = ['win', 'place']) {
     // Iterate bet types, click odds buttons, and capture metadata.
     const buttons = {
