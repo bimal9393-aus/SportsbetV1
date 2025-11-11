@@ -1,0 +1,6 @@
+{
+  "failureType": "General Error",
+  "name": "Error",
+  "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\u001b[7m7\u001b[27m1.00\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7m10\u001b[27m1.00\"\u001b[39m",
+  "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\u001b[7m7\u001b[27m1.00\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7m10\u001b[27m1.00\"\u001b[39m\n    at BetSlipCart.#assertOddsMatch (/Users/bimaljoy/Documents/GitHub_Playwright/SportsbetV1/src/pages/BetSlipCart.js:182:32)\n    at BetSlipCart.verifyBetsAdded (/Users/bimaljoy/Documents/GitHub_Playwright/SportsbetV1/src/pages/BetSlipCart.js:60:28)\n    at /Users/bimaljoy/Documents/GitHub_Playwright/SportsbetV1/src/tests/e2e/betSlip.spec.js:77:15"
+}

@@ -1,6 +1,7 @@
 const { allure } = require('allure-playwright');
 const { test } = require('../../fixtures/test-fixture');
-const scenarios = require('./data/placebettestdata.json'); // Test data drives horse selection.
+// Data file contains multiple race/horse combos so we can loop the same journey with different inputs.
+const scenarios = require('./data/placebettestdata.json');
 const { setLogSink } = require('../../core/logger');
 const { ElementNotFoundError, AssertionError, TimeoutError } = require('../../core/errors');
 
@@ -11,6 +12,7 @@ test.describe('Bet slip journey', () => {
   test.describe.configure({ timeout: 15000 });
 
   scenarios.forEach((dataSet) => {
+    // In CI mode we register the test as skipped. Locally we execute the real journey end-to-end.
     const runner = shouldSkipOnCi ? test.skip : test;
 
     runner(`${dataSet.name} › Adds Win + Place bets and verifies bet slip contents`, async ({ page, pom }, testInfo) => {
@@ -24,13 +26,14 @@ test.describe('Bet slip journey', () => {
         await allure.attachment(name, shot, 'image/png');
       };
 
-      // High-level journey broken into readable steps for Playwright UI.
+      // Capture the logger output so we can attach a plain-text execution log when the test completes.
       const logEntries = [];
       const previousSink = setLogSink((entry) => {
         logEntries.push(entry);
       });
 
       try {
+      // --- Step 1: launch homepage in mobile viewport (Sportsbet mobile view is ~420px). ---
       await test.step('Navigate to sportsbet.com.au @ 420px', async () => {
         await allure.step('Navigate to sportsbet.com.au @ 420px', async () => {
           await loginPage.goTo(url);
@@ -41,6 +44,7 @@ test.describe('Bet slip journey', () => {
         });
       });
 
+      // --- Step 2: open the first “Next to Jump” tile to reach an active race card. ---
       await test.step("Open first 'Next to Jump' card", async () => {
         await allure.step("Open first 'Next to Jump' card", async () => {
           await loginPage.openFirstRaceCard();
@@ -50,6 +54,7 @@ test.describe('Bet slip journey', () => {
         });
       });
 
+      // --- Step 3: wait for the race card to finish rendering so runners/odds exist. ---
       await test.step('Land on racecard', async () => {
         await allure.step('Land on racecard', async () => {
           await racecardPage.waitForRacecard();
@@ -58,8 +63,10 @@ test.describe('Bet slip journey', () => {
         });
       });
 
+      // Attempt to target the preferred horse; if unavailable we fall back to the configured index.
       const { horseCard } = await racecardPage.findHorseCardOrFallback(horseName, fallbackIndex);
 
+      // --- Step 4: add Win + Place bets for the selected runner and capture metadata for assertions. ---
       await test.step('Add two bets for chosen horse', async () => {
         await allure.step('Add two bets for chosen horse', async () => {
           await allure.step(`Chosen horse: ${horseName}`, async () => {});
@@ -72,6 +79,7 @@ test.describe('Bet slip journey', () => {
             await allure.step(`Added second bet successfully: ${JSON.stringify(placedBets[1])}`, async () => {});
           }
 
+          // --- Step 5: open the bet slip drawer, compare its contents to the captured bets, and log proof. ---
           await test.step('Open Bet Slip and verify bets', async () => {
             await allure.step('Open Bet Slip and verify bets', async () => {
               await betSlipCart.verifyBetsAdded(placedBets);

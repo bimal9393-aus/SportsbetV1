@@ -1,0 +1,513 @@
+# Page snapshot
+
+```yaml
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - banner [ref=e4]:
+              - generic [ref=e5]:
+                - button "Open Navigation Menu" [ref=e7]:
+                  - img [ref=e10] [cursor=pointer]
+                - img [ref=e13]
+                - button "" [ref=e16] [cursor=pointer]:
+                  - generic [ref=e17]: 
+              - generic [ref=e18]:
+                - generic [ref=e19]:
+                  - button "Join" [ref=e20]:
+                    - generic [ref=e25] [cursor=pointer]: Join
+                  - button "Log In" [ref=e26]:
+                    - generic [ref=e31] [cursor=pointer]: Log In
+                - button "Bet Slip 2" [ref=e32]:
+                  - generic [ref=e37] [cursor=pointer]:
+                    - generic [ref=e38]: Bet Slip
+                    - generic [ref=e41]: "2"
+            - generic:
+              - generic:              
+            - generic [ref=e43]:
+              - generic [ref=e44]:
+                - navigation [ref=e45]:
+                  - list [ref=e50]:
+                    - listitem [ref=e51]:
+                      - link "Home" [ref=e52] [cursor=pointer]:
+                        - /url: /
+                    - listitem [ref=e53]:
+                      - text: ">"
+                      - link "Horse Racing" [ref=e54] [cursor=pointer]:
+                        - /url: /horse-racing
+                    - listitem [ref=e55]:
+                      - text: ">"
+                      - link "Asia Racing" [ref=e56] [cursor=pointer]:
+                        - /url: /racing-schedule/today/horse-racing/international
+                    - listitem [ref=e57]:
+                      - text: ">"
+                      - link "Mombetsu" [ref=e58] [cursor=pointer]:
+                        - /url: /horse-racing/asia-racing/mombetsu
+                    - listitem [ref=e59]:
+                      - text: ">"
+                      - generic [ref=e60]: Race 8
+                  - generic [ref=e61]:
+                    - generic [ref=e65] [cursor=pointer]:
+                      - heading "Mombetsu" [level=1] [ref=e66]
+                      - generic [ref=e67]: 
+                    - generic [ref=e68]:
+                      - generic [ref=e69]:
+                        - list [ref=e70]:
+                          - listitem [ref=e71]:
+                            - link "1" [ref=e72] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-1-9827328
+                              - button "1" [ref=e75]:
+                                - generic [ref=e77]: "1"
+                          - listitem [ref=e78]:
+                            - link "2" [ref=e79] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-2-9827334
+                              - button "2" [ref=e82]:
+                                - generic [ref=e84]: "2"
+                          - listitem [ref=e85]:
+                            - link "3" [ref=e86] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-3-9827327
+                              - button "3" [ref=e89]:
+                                - generic [ref=e91]: "3"
+                          - listitem [ref=e92]:
+                            - link "4" [ref=e93] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-4-9827347
+                              - button "4" [ref=e96]:
+                                - generic [ref=e98]: "4"
+                          - listitem [ref=e99]:
+                            - link "5" [ref=e100] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-5-9827332
+                              - button "5" [ref=e103]:
+                                - generic [ref=e105]: "5"
+                          - listitem [ref=e106]:
+                            - link "6" [ref=e107] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-6-9827322
+                              - button "6" [ref=e110]:
+                                - generic [ref=e112]: "6"
+                          - listitem [ref=e113]:
+                            - link "7" [ref=e114] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-7-9827336
+                              - button "7" [ref=e117]:
+                                - generic [ref=e119]: "7"
+                          - listitem [ref=e120]:
+                            - link "8" [ref=e121] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-8-9827329
+                              - button "8" [ref=e124]:
+                                - generic [ref=e126]: "8"
+                          - listitem [ref=e127]:
+                            - link "9" [ref=e128] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-9-9827333
+                              - button "9" [ref=e131]:
+                                - generic [ref=e133]: "9"
+                          - listitem [ref=e134]:
+                            - link "10" [ref=e135] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-10-9827337
+                              - button "10" [ref=e138]:
+                                - generic [ref=e140]: "10"
+                          - listitem [ref=e141]:
+                            - link "11" [ref=e142] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-11-9827344
+                              - button "11" [ref=e145]:
+                                - generic [ref=e147]: "11"
+                          - listitem [ref=e148]:
+                            - link "12" [ref=e149] [cursor=pointer]:
+                              - /url: /horse-racing/asia-racing/mombetsu/race-12-9827343
+                              - button "12" [ref=e152]:
+                                - generic [ref=e154]: "12"
+                        - generic [ref=e157] [cursor=pointer]: 
+                        - generic [ref=e160] [cursor=pointer]: 
+                      - generic [ref=e162]:
+                        - heading "1000m R8 Race 8 - 1000" [level=2] [ref=e164]
+                        - generic [ref=e166]: 19s
+                  - list [ref=e168]:
+                    - listitem [ref=e169]
+                    - listitem [ref=e170]:
+                      - link "Win or Place" [ref=e171] [cursor=pointer]:
+                        - /url: /horse-racing/asia-racing/mombetsu/race-8-9827329
+                        - button "Win or Place" [ref=e174]:
+                          - generic [ref=e177]: Win or Place
+                - generic [ref=e181]:
+                  - generic [ref=e182]:
+                    - generic [ref=e183]:
+                      - generic [ref=e187]:
+                        - button "Expert Tips" [ref=e190] [cursor=pointer]:
+                          - generic [ref=e193]: Expert Tips
+                        - button " Flucs" [ref=e196] [cursor=pointer]:
+                          - generic [ref=e198]:
+                            - generic [ref=e199]: 
+                            - generic [ref=e200]: Flucs
+                        - button "Key Stats" [ref=e203] [cursor=pointer]:
+                          - generic [ref=e206]: Key Stats
+                        - button "Speed Map" [ref=e209] [cursor=pointer]:
+                          - generic [ref=e212]: Speed Map
+                      - text: 
+                      - generic [ref=e216]:
+                        - generic [ref=e218]: 
+                        - generic [ref=e220]: Fixed
+                    - generic [ref=e221]:
+                      - generic [ref=e223]:
+                        - button "Runner  " [ref=e224]:
+                          - generic [ref=e225] [cursor=pointer]:
+                            - generic [ref=e226]: Runner
+                            - generic [ref=e227]:
+                              - generic [ref=e228]: 
+                              - generic [ref=e229]: 
+                        - generic [ref=e230]:
+                          - button "Win  " [ref=e231]:
+                            - generic [ref=e232] [cursor=pointer]:
+                              - generic [ref=e233]: Win
+                              - generic [ref=e234]:
+                                - generic [ref=e235]: 
+                                - generic [ref=e236]: 
+                          - button "Place  " [ref=e237]:
+                            - generic [ref=e238] [cursor=pointer]:
+                              - generic [ref=e239]: Place
+                              - generic [ref=e240]:
+                                - generic [ref=e241]: 
+                                - generic [ref=e242]: 
+                      - generic [ref=e244]:
+                        - img [ref=e245]
+                        - generic [ref=e246] [cursor=pointer]:
+                          - generic [ref=e248]:
+                            - generic [ref=e249]: 1. Keiai Whakapono (1)
+                            - generic [ref=e250]:
+                              - generic [ref=e251]:
+                                - generic [ref=e252]: "W: 57.0kg"
+                                - generic [ref=e253]: "F: 263695"
+                              - generic [ref=e254]:
+                                - generic [ref=e256]: "J: Fuma Ono"
+                                - generic [ref=e257]: "T: Nozomi Ono"
+                          - generic [ref=e258]:
+                            - button " 9.00" [ref=e263]:
+                              - generic [ref=e264]:
+                                - generic [ref=e266]: 
+                                - generic [ref=e268]: "9.00"
+                            - button "1.65 " [ref=e273]:
+                              - generic [ref=e274]:
+                                - generic [ref=e276]: "1.65"
+                                - generic [ref=e278]: 
+                      - generic [ref=e280]:
+                        - img [ref=e281]
+                        - generic [ref=e282] [cursor=pointer]:
+                          - generic [ref=e284]:
+                            - generic [ref=e285]: 3. Aiga Ippai (3)
+                            - generic [ref=e286]:
+                              - generic [ref=e287]:
+                                - generic [ref=e288]: "W: 55.0kg"
+                                - generic [ref=e289]: "F: 370323"
+                              - generic [ref=e290]:
+                                - generic [ref=e292]: "J: Shinya Matsui"
+                                - generic [ref=e293]: "T: Ryuichi Yamaguchi"
+                          - generic [ref=e294]:
+                            - button "9.00" [ref=e299]:
+                              - generic [ref=e302]: "9.00"
+                            - button "1.65 " [ref=e307]:
+                              - generic [ref=e308]:
+                                - generic [ref=e310]: "1.65"
+                                - generic [ref=e312]: 
+                      - generic [ref=e314]:
+                        - img [ref=e315]
+                        - generic [ref=e316] [cursor=pointer]:
+                          - generic [ref=e318]:
+                            - generic [ref=e319]: 4. Pierre Tennessee (4)
+                            - generic [ref=e320]:
+                              - generic [ref=e321]:
+                                - generic [ref=e322]: "W: 51.0kg"
+                                - generic [ref=e323]: "F: 233335"
+                              - generic [ref=e324]:
+                                - generic [ref=e326]: "J: Shiotsu Rina"
+                                - generic [ref=e327]: "T: H Hiromori"
+                          - generic [ref=e328]:
+                            - button " 21.00" [ref=e333]:
+                              - generic [ref=e334]:
+                                - generic [ref=e336]: 
+                                - generic [ref=e338]: "21.00"
+                            - button " 2.80" [ref=e343]:
+                              - generic [ref=e344]:
+                                - generic [ref=e346]: 
+                                - generic [ref=e348]: "2.80"
+                      - generic [ref=e350]:
+                        - img [ref=e351]
+                        - generic [ref=e352] [cursor=pointer]:
+                          - generic [ref=e354]:
+                            - generic [ref=e355]: 5. Kiss Me Eye (5)
+                            - generic [ref=e356]:
+                              - generic [ref=e357]:
+                                - generic [ref=e358]: "W: 53.0kg"
+                                - generic [ref=e359]: "F: 360509"
+                              - generic [ref=e360]:
+                                - generic [ref=e362]: "J: Ryoga Fujita"
+                                - generic [ref=e363]: "T: Nozomi Ono"
+                          - generic [ref=e364]:
+                            - button "101.00 " [ref=e369]:
+                              - generic [ref=e370]:
+                                - generic [ref=e372]: "101.00"
+                                - generic [ref=e374]: 
+                            - button " 9.50" [ref=e379]:
+                              - generic [ref=e380]:
+                                - generic [ref=e382]: 
+                                - generic [ref=e384]: "9.50"
+                      - generic [ref=e386]:
+                        - img [ref=e387]
+                        - generic [ref=e388] [cursor=pointer]:
+                          - generic [ref=e390]:
+                            - generic [ref=e391]: 6. Speights Sage (6)
+                            - generic [ref=e392]:
+                              - generic [ref=e393]:
+                                - generic [ref=e394]: "W: 55.0kg"
+                                - generic [ref=e395]: "F: 646896"
+                              - generic [ref=e396]:
+                                - generic [ref=e398]: "J: Yamato Ishikawa"
+                                - generic [ref=e399]: "T: Fuyuki Igarashi"
+                          - generic [ref=e400]:
+                            - button "12.00" [ref=e405]:
+                              - generic [ref=e408]: "12.00"
+                            - button "1.95" [ref=e413]:
+                              - generic [ref=e416]: "1.95"
+                      - generic [ref=e418]:
+                        - img [ref=e419]
+                        - generic [ref=e420] [cursor=pointer]:
+                          - generic [ref=e422]:
+                            - generic [ref=e423]: 7. Sasakin Tomojiro (7)
+                            - generic [ref=e424]:
+                              - generic [ref=e425]:
+                                - generic [ref=e426]: "W: 57.0kg"
+                                - generic [ref=e427]: "F: 201155"
+                              - generic [ref=e428]:
+                                - generic [ref=e430]: "J: Masaaki Kuwamura"
+                                - generic [ref=e431]: "T: Hiroyuki Oguni"
+                          - generic [ref=e432]:
+                            - button "17.00 " [ref=e437]:
+                              - generic [ref=e438]:
+                                - generic [ref=e440]: "17.00"
+                                - generic [ref=e442]: 
+                            - button "2.40 " [ref=e447]:
+                              - generic [ref=e448]:
+                                - generic [ref=e450]: "2.40"
+                                - generic [ref=e452]: 
+                      - generic [ref=e454]:
+                        - img [ref=e455]
+                        - generic [ref=e456] [cursor=pointer]:
+                          - generic [ref=e458]:
+                            - generic [ref=e459]: 8. Iide Sky High (8)
+                            - generic [ref=e460]:
+                              - generic [ref=e461]:
+                                - generic [ref=e462]: "W: 55.0kg"
+                                - generic [ref=e463]: "F: 76x090"
+                              - generic [ref=e464]:
+                                - generic [ref=e466]: "J: Ryo Kosugi"
+                                - generic [ref=e467]: "T: Masakazu Murakami"
+                          - generic [ref=e468]:
+                            - button "101.00 " [ref=e473]:
+                              - generic [ref=e474]:
+                                - generic [ref=e476]: "101.00"
+                                - generic [ref=e478]: 
+                            - button " 9.50" [ref=e483]:
+                              - generic [ref=e484]:
+                                - generic [ref=e486]: 
+                                - generic [ref=e488]: "9.50"
+                      - generic [ref=e490]:
+                        - img [ref=e491]
+                        - generic [ref=e492] [cursor=pointer]:
+                          - generic [ref=e494]:
+                            - generic [ref=e495]: 9. Looks Like Patsu (9)
+                            - generic [ref=e496]:
+                              - generic [ref=e497]:
+                                - generic [ref=e498]: "W: 57.0kg"
+                                - generic [ref=e499]: "F: 00x602"
+                              - generic [ref=e500]:
+                                - generic [ref=e502]: "J: Yuki Miyauchi"
+                                - generic [ref=e503]: "T: Shoji Tanaka"
+                          - generic [ref=e504]:
+                            - button " 27.00" [ref=e509]:
+                              - generic [ref=e510]:
+                                - generic [ref=e512]: 
+                                - generic [ref=e514]: "27.00"
+                            - button " 3.30" [ref=e519]:
+                              - generic [ref=e520]:
+                                - generic [ref=e522]: 
+                                - generic [ref=e524]: "3.30"
+                      - generic [ref=e526]:
+                        - img [ref=e527]
+                        - generic [ref=e528] [cursor=pointer]:
+                          - generic [ref=e530]:
+                            - generic [ref=e531]: 10. Mozu And Mozu (10)
+                            - generic [ref=e532]:
+                              - generic [ref=e533]:
+                                - generic [ref=e534]: "W: 55.0kg"
+                                - generic [ref=e535]: "F: 0x00x1"
+                              - generic [ref=e536]:
+                                - generic [ref=e538]: "J: Genta Ochiai"
+                                - generic [ref=e539]: "T: Junji Tanaka"
+                          - generic [ref=e540]:
+                            - button "1.10 Fav" [ref=e545]:
+                              - generic [ref=e548]: "1.10"
+                              - generic [ref=e553]: Fav
+                            - button "1.02" [ref=e558]:
+                              - generic [ref=e561]: "1.02"
+                      - generic [ref=e563]:
+                        - img [ref=e564]
+                        - generic [ref=e565] [cursor=pointer]:
+                          - generic [ref=e567]:
+                            - generic [ref=e568]: 11. Hanakanzashi (11)
+                            - generic [ref=e569]:
+                              - generic [ref=e570]:
+                                - generic [ref=e571]: "W: 55.0kg"
+                                - generic [ref=e572]: "F: 545653"
+                              - generic [ref=e573]:
+                                - generic [ref=e575]: "J: Ryu Abe"
+                                - generic [ref=e576]: "T: Masahiro Saito"
+                          - generic [ref=e577]:
+                            - button " 61.00" [ref=e582]:
+                              - generic [ref=e583]:
+                                - generic [ref=e585]: 
+                                - generic [ref=e587]: "61.00"
+                            - button " 6.50" [ref=e592]:
+                              - generic [ref=e593]:
+                                - generic [ref=e595]: 
+                                - generic [ref=e597]: "6.50"
+                      - generic [ref=e599] [cursor=pointer]:
+                        - generic [ref=e600]:
+                          - generic [ref=e601]: 2. Prismatica (2)
+                          - generic [ref=e602]: Scratched
+                        - generic [ref=e604]: Scratched
+                      - generic [ref=e606]: Other rules:Fixed Odds will be available 10 minutes prior to each race
+                  - generic [ref=e615] [cursor=pointer]:
+                    - generic [ref=e618]: 
+                    - generic [ref=e619]: Speed Maps
+              - generic [ref=e620]:
+                - generic [ref=e621]:
+                  - generic [ref=e622]: IMAGINE WHAT YOU COULD BE BUYING INSTEAD.
+                  - generic [ref=e623]:
+                    - text: For free and confidential support call
+                    - link "1800 858 858" [ref=e625] [cursor=pointer]:
+                      - /url: tel:1800858858
+                      - generic [ref=e626]: 1800 858 858
+                    - text: or visit
+                    - link "gamblinghelponline.org.au" [ref=e627] [cursor=pointer]:
+                      - /url: https://gamblinghelponline.org.au
+                - generic [ref=e628]:
+                  - generic [ref=e630]:
+                    - text: BetStop - the National Self-Exclusion Register™ is a free service provided by the Australian Government that allows people to self-exclude from all licensed Australian online and phone wagering providers in a single process. Registering is quick and easy and can be done at
+                    - link "www.betstop.gov.au." [ref=e631] [cursor=pointer]:
+                      - /url: https://betstop.gov.au
+                      - generic [ref=e632]: www.betstop.gov.au.
+                  - generic [ref=e633]: While you are registered, Australian licensed online and phone wagering providers must not open a wagering account for you, allow you to place bets, or send you marketing material.
+                - link "Terms & Conditions" [ref=e635] [cursor=pointer]:
+                  - /url: https://helpcentre.sportsbet.com.au/hc/en-us/articles/115004802547
+                - generic [ref=e636]: Copyright © Sportsbet Pty Ltd.
+            - generic [ref=e639]:
+              - banner [ref=e640]:
+                - button "" [ref=e641] [cursor=pointer]:
+                  - generic [ref=e642]: 
+                - generic [ref=e643]: Bet Slip
+                - generic [ref=e646]: "2"
+              - generic [ref=e649]:
+                - generic [ref=e650]:
+                  - generic [ref=e652]:
+                    - generic [ref=e653] [cursor=pointer]:
+                      - generic [ref=e654]:
+                        - heading "Singles" [level=2] [ref=e656]:
+                          - generic [ref=e657]: Singles
+                        - generic [ref=e661]: "2"
+                      - generic [ref=e666]: 
+                    - generic [ref=e668]:
+                      - generic [ref=e669]:
+                        - generic [ref=e672]:
+                          - generic [ref=e676]: 
+                          - generic [ref=e678]: Stake all singles
+                        - generic [ref=e685]: $0.00
+                      - generic [ref=e686]:
+                        - generic [ref=e688]:
+                          - generic [ref=e689]:
+                            - generic [ref=e693]: 
+                            - link "Mombetsu R8" [ref=e696] [cursor=pointer]:
+                              - /url: /racecard/9827329
+                            - generic [ref=e700]: 19s
+                          - generic [ref=e701]:
+                            - img [ref=e703]
+                            - generic [ref=e704]:
+                              - generic [ref=e707]: 5. Kiss Me Eye (5)
+                              - generic [ref=e709]: Win or Place
+                            - generic [ref=e712]: "101.00"
+                        - generic [ref=e713]:
+                          - generic [ref=e717]:
+                            - generic [ref=e719]: Fixed
+                            - generic [ref=e721]: 
+                          - generic [ref=e724]:
+                            - button "Win" [ref=e726] [cursor=pointer]:
+                              - generic [ref=e727]: Win
+                            - button "Place" [ref=e729] [cursor=pointer]:
+                              - generic [ref=e730]: Place
+                            - button "Each Way" [ref=e732] [cursor=pointer]:
+                              - generic [ref=e733]: Each Way
+                        - generic [ref=e742]: $0.00
+                        - generic [ref=e743]:
+                          - generic [ref=e746]: 
+                          - generic [ref=e747]:
+                            - generic [ref=e748]: Potential Returns
+                            - generic [ref=e749]: N/A
+                        - button "" [ref=e753] [cursor=pointer]:
+                          - generic [ref=e754]: 
+                      - generic [ref=e755]:
+                        - generic [ref=e757]:
+                          - generic [ref=e758]:
+                            - generic [ref=e762]: 
+                            - link "Mombetsu R8" [ref=e765] [cursor=pointer]:
+                              - /url: /racecard/9827329
+                            - generic [ref=e769]: 19s
+                          - generic [ref=e770]:
+                            - img [ref=e772]
+                            - generic [ref=e773]:
+                              - generic [ref=e776]: 5. Kiss Me Eye (5)
+                              - generic [ref=e778]: Win or Place
+                            - generic [ref=e781]: "7.50"
+                        - generic [ref=e782]:
+                          - generic [ref=e786]:
+                            - generic [ref=e788]: Fixed
+                            - generic [ref=e790]: 
+                          - generic [ref=e793]:
+                            - button "Win" [ref=e795] [cursor=pointer]:
+                              - generic [ref=e796]: Win
+                            - button "Place" [ref=e798] [cursor=pointer]:
+                              - generic [ref=e799]: Place
+                            - button "Each Way" [ref=e801] [cursor=pointer]:
+                              - generic [ref=e802]: Each Way
+                        - generic [ref=e811]: $0.00
+                        - generic [ref=e812]:
+                          - generic [ref=e815]: 
+                          - generic [ref=e816]:
+                            - generic [ref=e817]: Potential Returns
+                            - generic [ref=e818]: N/A
+                        - button "" [ref=e822] [cursor=pointer]:
+                          - generic [ref=e823]: 
+                  - generic [ref=e826]:
+                    - generic [ref=e827] [cursor=pointer]:
+                      - heading "Standard Multi" [level=2] [ref=e830]:
+                        - generic [ref=e831]: Standard Multi
+                      - generic [ref=e836]: 
+                    - generic [ref=e840]:
+                      - generic [ref=e841]:
+                        - generic [ref=e843]: 
+                        - generic [ref=e844]: Standard Multi
+                      - text: Add more selections to create a Multi, or combine with a Same Game Multi and increase your potential returns.
+                - generic [ref=e846]:
+                  - generic [ref=e847]: IMAGINE WHAT YOU COULD BE BUYING INSTEAD.
+                  - generic [ref=e848]: For free and confidential support call 1800 858 858 or visit gamblinghelponline.org.au
+              - contentinfo [ref=e850]:
+                - button "Log In" [ref=e852] [cursor=pointer]:
+                  - generic [ref=e853]: Log In
+                - generic [ref=e854]:
+                  - generic [ref=e855]:
+                    - generic [ref=e856]: Total Stake
+                    - generic [ref=e857]: $0.00
+                  - generic [ref=e858]:
+                    - generic [ref=e859]: Potential Returns
+                    - generic [ref=e861]: N/A
+                  - generic [ref=e862]:
+                    - button "Clear Bets" [ref=e865] [cursor=pointer]:
+                      - generic [ref=e866]: Clear Bets
+                    - button "Place Bet" [ref=e869] [cursor=pointer]:
+                      - generic [ref=e870]: Place Bet
+```

@@ -1,0 +1,3 @@
+[19:59:49] [e2e:Mountaineer R8 - Charlie Mes or fallback › Adds Win + Place bets and verifies bet slip contents:RacecardPage] [WARN] Horse not found, selecting fallback runner {"horseName":"1. Charlie Mes","fallbackIndex":3,"fallbackRunner":"5. Kiss Me Eye (5)"}
+[19:59:51] [e2e:Mountaineer R8 - Charlie Mes or fallback › Adds Win + Place bets and verifies bet slip contents:RacecardPage] [INFO] Bet added to slip {"runner":"5. Kiss Me Eye (5)","betType":"Win","odds":"71.00"}
+[19:59:51] [e2e:Mountaineer R8 - Charlie Mes or fallback › Adds Win + Place bets and verifies bet slip contents:RacecardPage] [INFO] Bet added to slip {"runner":"5. Kiss Me Eye (5)","betType":"Place","odds":"9.50"}

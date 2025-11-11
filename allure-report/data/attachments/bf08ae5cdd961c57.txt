@@ -1,0 +1,5 @@
+[19:59:58] [e2e:Bursa R6 - Sancar Efesi  or fallback › Adds Win + Place bets and verifies bet slip contents:RacecardPage] [WARN] Horse not found, selecting fallback runner {"horseName":"1. Sancar Efesi (2)","fallbackIndex":0,"fallbackRunner":"1. Keiai Whakapono (1)"}
+[20:00:00] [e2e:Bursa R6 - Sancar Efesi  or fallback › Adds Win + Place bets and verifies bet slip contents:RacecardPage] [INFO] Bet added to slip {"runner":"1. Keiai Whakapono (1)","betType":"Win","odds":"9.00"}
+[20:00:00] [e2e:Bursa R6 - Sancar Efesi  or fallback › Adds Win + Place bets and verifies bet slip contents:RacecardPage] [INFO] Bet added to slip {"runner":"1. Keiai Whakapono (1)","betType":"Place","odds":"1.65"}
+[20:00:00] [e2e:Bursa R6 - Sancar Efesi  or fallback › Adds Win + Place bets and verifies bet slip contents:BetSlipCart] [INFO] Bet verified {"runner":"1. Keiai Whakapono (1)","odds":"9.00","actualBetType":"Win","expectedBetType":"Win"}
+[20:00:00] [e2e:Bursa R6 - Sancar Efesi  or fallback › Adds Win + Place bets and verifies bet slip contents:BetSlipCart] [INFO] Bet verified {"runner":"1. Keiai Whakapono (1)","odds":"1.65","actualBetType":"Place","expectedBetType":"Place"}
