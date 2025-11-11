@@ -1,5 +1,7 @@
 const { defineConfig, devices } = require('@playwright/test');
 
+const isCI = !!process.env.CI;
+
 module.exports = defineConfig({
   testDir: './src/tests',
   testMatch: ['**/*.spec.js', '**/*.test.js'],
@@ -15,7 +17,7 @@ module.exports = defineConfig({
   ],
   use: {
     browserName: 'chromium',
-    headless: false,
+    headless: isCI ? true : false,
     trace: 'retain-on-failure',
     screenshot: 'on',
     viewport: { width: 420, height: 800 },
@@ -25,7 +27,7 @@ module.exports = defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        headless: false,
+        headless: isCI ? true : false,
         trace: 'retain-on-failure',
         screenshot: 'on',
         viewport: { width: 420, height: 800 },
@@ -35,7 +37,7 @@ module.exports = defineConfig({
       name: 'firefox',
       use: {
         ...devices['Desktop Firefox'],
-        headless: false,
+        headless: isCI ? true : false,
         trace: 'retain-on-failure',
         screenshot: 'on',
         viewport: { width: 420, height: 800 },
@@ -45,7 +47,7 @@ module.exports = defineConfig({
       name: 'webkit',
       use: {
         ...devices['Desktop Safari'],
-        headless: false,
+        headless: isCI ? true : false,
         trace: 'retain-on-failure',
         screenshot: 'on',
         viewport: { width: 420, height: 800 },
