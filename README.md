@@ -69,6 +69,9 @@ Key scripts (`package.json`):
 
 - `run-tests.sh`  
   - Cleans generated folders, installs deps if missing, runs tests, opens Allure.
+   - Before each run, update `horseName` to a runner you can currently see on sportsbet.com.au. Names are free text, so keep them aligned with what the UI shows (e.g., `"1. Charlie Mes"`).
+  - Set `fallbackIndex` (0-based) to a runner position you know will exist in case the preferred horse is scratched or missing. Example: `0` targets the first runner card, `3` targets the fourth.
+  - Save the file and rerun `./run-tests.sh`; every dataset in this JSON executes once per browser project, so keep the list focused on active races.
 
 ---
 
