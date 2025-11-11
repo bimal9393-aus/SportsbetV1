@@ -146,5 +146,15 @@ If given more time:
 - **Bet not found**: update `placebettestdata.json` with horses currently available or use fallback indices that exist in the race card.
 
 ---
+## Why Page Object Model?
 
+This suite deliberately follows a Page Object Model (POM) layout because the Sportsbet flow spans multiple dynamic views (home carousel, racecard, bet slip) and the UI uses the same widgets in several contexts. Splitting responsibilities keeps selectors, waits, and logging in one place while tests remain scenario-focused.
+
+- `src/core/BasePage.js` centralises navigation/wait helpers so every page object inherits resilience features (visibility guards, retry logic, URL/title expectations).
+- `src/pages/HomePage.js`, `RaceCardPage.js`, and `BetSlipCart.js` expose intent-level methods (e.g., `openFirstRaceCard`, `placeBetsOnCard`, `verifyBetsAdded`) instead of raw locators, which makes the single e2e spec read like a business journey.
+- `src/core/PageObjectManager.js` ensures each test gets cached instances with scoped loggers, which keeps Allure attachments tidy and prevents duplicate instantiations.
+- When selectors inevitably change, updates happen in one module rather than across every spec. That’s critical here because ~80% of locators rely on `data-automation-id` hooks while the remaining few still use hashed classes.
+- The structure leaves room for growth: additional journeys can compose existing page objects, and shared fixtures (`src/fixtures/test-fixture.js`) can expose higher-level helpers for teammates who aren’t Playwright experts.
+
+---
 
