@@ -24,7 +24,7 @@ npx playwright install --with-deps
 ## Quick Start
 
 ```bash
-git clone https://github.com/<you>/SportsbetChallenge.git
+git clone https://github.com/bimal9393-aus/SportsbetV1.git`
 cd SportsbetChallenge
 npm install
 ./run-tests.sh        # runs tests (Chromium/Firefox/WebKit) + opens Allure report
